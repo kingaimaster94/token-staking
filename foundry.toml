@@ -1,0 +1,31 @@
+[profile.default]
+solc = "0.8.25"
+optimizer = true
+optimizer_runs = 200
+via_ir = true
+src = "src"
+out = "out"
+libs = ["lib"]
+fs_permissions = [{ access = "read-write", path = "./"}]
+
+[rpc_endpoints]
+mainnet = "https://bsc-testnet.blockpi.network/v1/rpc/public"
+
+[fmt]
+bracket_spacing = true
+int_types = "long"
+line_length = 120
+multiline_func_header = "params_first"
+number_underscore = "thousands"
+quote_style = "double"
+tab_width = 4
+
+[fuzz]
+runs = 2048
+max_test_rejects = 262144
+
+[etherscan]
+mainnet = { key = "MIQ2B1NB9WNVIN16P6EVC687UJDV65X78K" }
+holesky = { key = "MIQ2B1NB9WNVIN16P6EVC687UJDV65X78K" }
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

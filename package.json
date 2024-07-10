@@ -1,0 +1,26 @@
+{
+	"name": "@repo/contracts",
+	"version": "0.0.0",
+	"description": "",
+	"exports": {
+		".": "./index.ts"
+	},
+	"scripts": {
+		"build:dev": "forge build --ast && tsx buildTsArtifacts.ts",
+		"clean": "forge clean && rm -rf ts-artifacts",
+		"test": "forge test"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.24",
+		"eslint": "8.13.0",
+		"eslint-config-next": "12.1.5",
+		"hardhat": "^2.22.5",
+		"tsx": "^4.7.1",
+		"typescript": "4.6.3"
+	},
+	"dependencies": {
+		"@openzeppelin/contracts": "^5.0.2",
+		"@openzeppelin/contracts-upgradeable": "^5.0.2",
+		"solady": "^0.0.180"
+	}
+}
